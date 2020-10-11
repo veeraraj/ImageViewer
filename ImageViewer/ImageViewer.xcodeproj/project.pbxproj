@@ -27,6 +27,8 @@
 		0D2477DE25338E450074D297 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477DD25338E450074D297 /* LoadingView.swift */; };
 		0D2477E625338E720074D297 /* NetworkIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477E525338E720074D297 /* NetworkIndicatorView.swift */; };
 		0D2477F0253395310074D297 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC2825335D6F003152C3 /* ImageViewController.swift */; };
+		0D2477F625339D8B0074D297 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477F525339D8B0074D297 /* ImageTableViewCell.swift */; };
+		0D2478062533A5420074D297 /* FactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2478052533A5420074D297 /* FactListViewModel.swift */; };
 		6015893B0D236178532D8D13 /* Pods_ImageViewer_ImageViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */; };
 		E899C020E19A53BD248118DF /* Pods_ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B184728C14FBF2DC235FE /* Pods_ImageViewer.framework */; };
 		EBED9DE842B631F3DFFDFA8E /* Pods_ImageViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */; };
@@ -76,6 +78,9 @@
 		0D2477D325338DE80074D297 /* UIScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extensions.swift"; sourceTree = "<group>"; };
 		0D2477DD25338E450074D297 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0D2477E525338E720074D297 /* NetworkIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkIndicatorView.swift; sourceTree = "<group>"; };
+		0D2477F525339D8B0074D297 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		0D2478052533A5420074D297 /* FactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListViewModel.swift; sourceTree = "<group>"; };
+		0D24780D2533BB6E0074D297 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewer_ImageViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684972DCC3B93037CEB7C0F2 /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -118,6 +123,7 @@
 		0D15BC1825335D6F003152C3 = {
 			isa = PBXGroup;
 			children = (
+				0D24780D2533BB6E0074D297 /* README.md */,
 				0D15BC2325335D6F003152C3 /* ImageViewer */,
 				0D15BC3A25335D73003152C3 /* ImageViewerTests */,
 				0D15BC4525335D73003152C3 /* ImageViewerUITests */,
@@ -140,17 +146,15 @@
 		0D15BC2325335D6F003152C3 /* ImageViewer */ = {
 			isa = PBXGroup;
 			children = (
-				0D2477CA25338D4B0074D297 /* ViewModels */,
-				0D2477C925338D3E0074D297 /* Views */,
+				0D15BC2425335D6F003152C3 /* AppDelegate.swift */,
 				0D2477AC25336BC70074D297 /* Models */,
-				0D2477B3253380560074D297 /* Resources */,
+				0D2477C925338D3E0074D297 /* Views */,
+				0D2477CA25338D4B0074D297 /* ViewModels */,
+				0D247789253364A40074D297 /* Network */,
 				0D2477A6253369840074D297 /* Utils */,
 				0D2477A0253368A20074D297 /* Extensions */,
-				0D247789253364A40074D297 /* Network */,
 				0D15BC6A25335FDA003152C3 /* Coordinator */,
-				0D15BC2425335D6F003152C3 /* AppDelegate.swift */,
-				0D15BC2D25335D73003152C3 /* Assets.xcassets */,
-				0D15BC2F25335D73003152C3 /* LaunchScreen.storyboard */,
+				0D2477B3253380560074D297 /* Resources */,
 				0D15BC3225335D73003152C3 /* Info.plist */,
 			);
 			path = ImageViewer;
@@ -238,6 +242,8 @@
 		0D2477B3253380560074D297 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0D15BC2F25335D73003152C3 /* LaunchScreen.storyboard */,
+				0D15BC2D25335D73003152C3 /* Assets.xcassets */,
 				0D2477B4253380610074D297 /* Mock */,
 			);
 			path = Resources;
@@ -264,6 +270,7 @@
 		0D2477CA25338D4B0074D297 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0D2478052533A5420074D297 /* FactListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -287,6 +294,7 @@
 		0D2477D225338DCA0074D297 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				0D2477F425339D7D0074D297 /* ImageTableViewCell */,
 				0D2477DC25338E2C0074D297 /* NetworkIndicatorView */,
 				0D2477DB25338E1D0074D297 /* LoadingView */,
 			);
@@ -307,6 +315,14 @@
 				0D2477E525338E720074D297 /* NetworkIndicatorView.swift */,
 			);
 			path = NetworkIndicatorView;
+			sourceTree = "<group>";
+		};
+		0D2477F425339D7D0074D297 /* ImageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0D2477F525339D8B0074D297 /* ImageTableViewCell.swift */,
+			);
+			path = ImageTableViewCell;
 			sourceTree = "<group>";
 		};
 		E7E44C47E39213EF628DDC39 /* Pods */ = {
@@ -579,12 +595,14 @@
 				0D2477DE25338E450074D297 /* LoadingView.swift in Sources */,
 				0D2477F0253395310074D297 /* ImageViewController.swift in Sources */,
 				0D2477A2253368CA0074D297 /* URL+Extensions.swift in Sources */,
+				0D2477F625339D8B0074D297 /* ImageTableViewCell.swift in Sources */,
 				0D2477A8253369930074D297 /* ThreadHelper.swift in Sources */,
 				0D15BC7125336031003152C3 /* MainCoordinator.swift in Sources */,
 				0D2477D425338DE80074D297 /* UIScreen+Extensions.swift in Sources */,
 				0D15BC2525335D6F003152C3 /* AppDelegate.swift in Sources */,
 				0D15BC6C25335FFE003152C3 /* Coordinator.swift in Sources */,
 				0D247797253368510074D297 /* NetworkService.swift in Sources */,
+				0D2478062533A5420074D297 /* FactListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
