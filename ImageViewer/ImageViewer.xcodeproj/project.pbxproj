@@ -15,6 +15,7 @@
 		0D15BC4725335D73003152C3 /* ImageViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC4625335D73003152C3 /* ImageViewerUITests.swift */; };
 		0D15BC6C25335FFE003152C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC6B25335FFE003152C3 /* Coordinator.swift */; };
 		0D15BC7125336031003152C3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC7025336031003152C3 /* MainCoordinator.swift */; };
+		0D24778C253364D20074D297 /* ReachabilityHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24778B253364D20074D297 /* ReachabilityHandler.swift */; };
 		6015893B0D236178532D8D13 /* Pods_ImageViewer_ImageViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */; };
 		E899C020E19A53BD248118DF /* Pods_ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B184728C14FBF2DC235FE /* Pods_ImageViewer.framework */; };
 		EBED9DE842B631F3DFFDFA8E /* Pods_ImageViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */; };
@@ -52,6 +53,7 @@
 		0D15BC4825335D73003152C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D15BC6B25335FFE003152C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0D15BC7025336031003152C3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0D24778B253364D20074D297 /* ReachabilityHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHandler.swift; sourceTree = "<group>"; };
 		120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewer_ImageViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684972DCC3B93037CEB7C0F2 /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 		0D15BC2325335D6F003152C3 /* ImageViewer */ = {
 			isa = PBXGroup;
 			children = (
+				0D247789253364A40074D297 /* Network */,
 				0D15BC6A25335FDA003152C3 /* Coordinator */,
 				0D15BC2425335D6F003152C3 /* AppDelegate.swift */,
 				0D15BC2825335D6F003152C3 /* ViewController.swift */,
@@ -151,6 +154,22 @@
 				0D15BC7025336031003152C3 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0D247789253364A40074D297 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0D24778A253364AB0074D297 /* ReachabilityHandler */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0D24778A253364AB0074D297 /* ReachabilityHandler */ = {
+			isa = PBXGroup;
+			children = (
+				0D24778B253364D20074D297 /* ReachabilityHandler.swift */,
+			);
+			path = ReachabilityHandler;
 			sourceTree = "<group>";
 		};
 		E7E44C47E39213EF628DDC39 /* Pods */ = {
@@ -413,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D24778C253364D20074D297 /* ReachabilityHandler.swift in Sources */,
 				0D15BC2925335D6F003152C3 /* ViewController.swift in Sources */,
 				0D15BC7125336031003152C3 /* MainCoordinator.swift in Sources */,
 				0D15BC2525335D6F003152C3 /* AppDelegate.swift in Sources */,
