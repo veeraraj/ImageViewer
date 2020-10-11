@@ -22,6 +22,7 @@
 		0D2477A2253368CA0074D297 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477A1253368CA0074D297 /* URL+Extensions.swift */; };
 		0D2477A8253369930074D297 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477A7253369930074D297 /* ThreadHelper.swift */; };
 		0D2477AE25336BEF0074D297 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477AD25336BEF0074D297 /* ImageModel.swift */; };
+		0D2477C1253380DB0074D297 /* ImageMock.json in Resources */ = {isa = PBXBuildFile; fileRef = 0D2477B52533806E0074D297 /* ImageMock.json */; };
 		6015893B0D236178532D8D13 /* Pods_ImageViewer_ImageViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */; };
 		E899C020E19A53BD248118DF /* Pods_ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B184728C14FBF2DC235FE /* Pods_ImageViewer.framework */; };
 		EBED9DE842B631F3DFFDFA8E /* Pods_ImageViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */; };
@@ -66,6 +67,7 @@
 		0D2477A1253368CA0074D297 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		0D2477A7253369930074D297 /* ThreadHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadHelper.swift; sourceTree = "<group>"; };
 		0D2477AD25336BEF0074D297 /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		0D2477B52533806E0074D297 /* ImageMock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ImageMock.json; sourceTree = "<group>"; };
 		120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewer_ImageViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684972DCC3B93037CEB7C0F2 /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0D2477AC25336BC70074D297 /* Models */,
+				0D2477B3253380560074D297 /* Resources */,
 				0D2477A6253369840074D297 /* Utils */,
 				0D2477A0253368A20074D297 /* Extensions */,
 				0D247789253364A40074D297 /* Network */,
@@ -220,6 +223,22 @@
 				0D2477AD25336BEF0074D297 /* ImageModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0D2477B3253380560074D297 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D2477B4253380610074D297 /* Mock */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D2477B4253380610074D297 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0D2477B52533806E0074D297 /* ImageMock.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		E7E44C47E39213EF628DDC39 /* Pods */ = {
@@ -362,6 +381,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D2477C1253380DB0074D297 /* ImageMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

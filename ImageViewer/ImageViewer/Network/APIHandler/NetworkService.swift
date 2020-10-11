@@ -93,3 +93,43 @@ class NetworkService {
         }
     }
 }
+
+//--------------------------------------------------------------------------
+// MARK: - Unit testing with Mock
+//--------------------------------------------------------------------------
+
+class MockNetworkService: NetworkService {
+    override func load<T>(router: URLRouter<T>, completion: @escaping (Result<T, Error>) -> Void) {
+        guard
+            router.urlString.isEmpty == false
+        else {
+            completion(.failure(NetworkError.badURL))
+            return
+        }
+        
+        let fileURL = URL(fileURLWithPath: router.urlString)
+        
+         guard
+            let data = try? Data(contentsOf: fileURL)
+         else {
+             fatalError("Couldn't read imagemock.json file")
+         }
+        
+        do {
+            /* To fix the error Unable to convert data to string around character 2643 have to convert the response data to utfd data*/
+            guard
+                let utf8Data = String(decoding: data, as: UTF8.self).data(using: .utf8),
+                let result = try? JSONDecoder().decode(T.self, from: utf8Data)
+            else {
+                ThreadHelper.mainThreadAsync {
+                    completion(.failure(NetworkError.decodingFailed))
+                }
+                return
+            }
+            
+            ThreadHelper.mainThreadAsync {
+                completion(.success(result))
+            }
+        }
+    }
+}
