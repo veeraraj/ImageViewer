@@ -3,18 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D15BC2525335D6F003152C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC2425335D6F003152C3 /* AppDelegate.swift */; };
-		0D15BC2725335D6F003152C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC2625335D6F003152C3 /* SceneDelegate.swift */; };
 		0D15BC2925335D6F003152C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC2825335D6F003152C3 /* ViewController.swift */; };
-		0D15BC2C25335D6F003152C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D15BC2A25335D6F003152C3 /* Main.storyboard */; };
 		0D15BC2E25335D73003152C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D15BC2D25335D73003152C3 /* Assets.xcassets */; };
 		0D15BC3125335D73003152C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D15BC2F25335D73003152C3 /* LaunchScreen.storyboard */; };
 		0D15BC3C25335D73003152C3 /* ImageViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC3B25335D73003152C3 /* ImageViewerTests.swift */; };
 		0D15BC4725335D73003152C3 /* ImageViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC4625335D73003152C3 /* ImageViewerUITests.swift */; };
+		0D15BC6C25335FFE003152C3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC6B25335FFE003152C3 /* Coordinator.swift */; };
+		0D15BC7125336031003152C3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC7025336031003152C3 /* MainCoordinator.swift */; };
 		6015893B0D236178532D8D13 /* Pods_ImageViewer_ImageViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */; };
 		E899C020E19A53BD248118DF /* Pods_ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B184728C14FBF2DC235FE /* Pods_ImageViewer.framework */; };
 		EBED9DE842B631F3DFFDFA8E /* Pods_ImageViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */; };
@@ -40,9 +40,7 @@
 /* Begin PBXFileReference section */
 		0D15BC2125335D6F003152C3 /* ImageViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D15BC2425335D6F003152C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D15BC2625335D6F003152C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0D15BC2825335D6F003152C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D15BC2B25335D6F003152C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D15BC2D25335D73003152C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D15BC3025335D73003152C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D15BC3225335D73003152C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +50,8 @@
 		0D15BC4225335D73003152C3 /* ImageViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D15BC4625335D73003152C3 /* ImageViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerUITests.swift; sourceTree = "<group>"; };
 		0D15BC4825335D73003152C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D15BC6B25335FFE003152C3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0D15BC7025336031003152C3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewer_ImageViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684972DCC3B93037CEB7C0F2 /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,10 +116,9 @@
 		0D15BC2325335D6F003152C3 /* ImageViewer */ = {
 			isa = PBXGroup;
 			children = (
+				0D15BC6A25335FDA003152C3 /* Coordinator */,
 				0D15BC2425335D6F003152C3 /* AppDelegate.swift */,
-				0D15BC2625335D6F003152C3 /* SceneDelegate.swift */,
 				0D15BC2825335D6F003152C3 /* ViewController.swift */,
-				0D15BC2A25335D6F003152C3 /* Main.storyboard */,
 				0D15BC2D25335D73003152C3 /* Assets.xcassets */,
 				0D15BC2F25335D73003152C3 /* LaunchScreen.storyboard */,
 				0D15BC3225335D73003152C3 /* Info.plist */,
@@ -145,6 +144,15 @@
 			path = ImageViewerUITests;
 			sourceTree = "<group>";
 		};
+		0D15BC6A25335FDA003152C3 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0D15BC6B25335FFE003152C3 /* Coordinator.swift */,
+				0D15BC7025336031003152C3 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		E7E44C47E39213EF628DDC39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +163,6 @@
 				D9F6B624CD0EF188AB15DA7E /* Pods-ImageViewerTests.debug.xcconfig */,
 				68DA22A2F4BCDE62915EFF23 /* Pods-ImageViewerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -279,7 +286,6 @@
 			files = (
 				0D15BC3125335D73003152C3 /* LaunchScreen.storyboard in Resources */,
 				0D15BC2E25335D73003152C3 /* Assets.xcassets in Resources */,
-				0D15BC2C25335D6F003152C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,8 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D15BC2925335D6F003152C3 /* ViewController.swift in Sources */,
+				0D15BC7125336031003152C3 /* MainCoordinator.swift in Sources */,
 				0D15BC2525335D6F003152C3 /* AppDelegate.swift in Sources */,
-				0D15BC2725335D6F003152C3 /* SceneDelegate.swift in Sources */,
+				0D15BC6C25335FFE003152C3 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,14 +452,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0D15BC2A25335D6F003152C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D15BC2B25335D6F003152C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0D15BC2F25335D73003152C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -515,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -570,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
