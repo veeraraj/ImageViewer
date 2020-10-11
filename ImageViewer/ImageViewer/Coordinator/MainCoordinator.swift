@@ -15,14 +15,15 @@ class MainCoordinator: Coordinator {
     //--------------------------------------------------------------------------
 
     var childCoordinator = [Coordinator]()
-    var navigationController: UINavigationController
+    var navigationController: UINavigationController?
+    let window : UIWindow
 
     //--------------------------------------------------------------------------
     // MARK: - Init
     //--------------------------------------------------------------------------
 
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
+    init(window: UIWindow) {
+        self.window = window
     }
 
     //--------------------------------------------------------------------------
@@ -30,10 +31,14 @@ class MainCoordinator: Coordinator {
     //--------------------------------------------------------------------------
 
     func start() {
-        let vc = ViewController()
-        vc.view.frame = UIScreen.main.bounds
-        vc.view.backgroundColor = .yellow
-        vc.coorodinator = self
-        navigationController.pushViewController(vc, animated: true)
+        let navigationController = UINavigationController(rootViewController: ImageViewController())
+        navigationController.navigationBar.barStyle = .default
+        navigationController.navigationBar.barTintColor = .lightGray
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.isTranslucent = false
+        self.navigationController = navigationController
+
+        window.rootViewController = navigationController
+        window.makeKeyAndVisible()
     }
 }

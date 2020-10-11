@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ImageViewController.swift
 //  ImageViewer
 //
 //  Created by Veera on 11/10/20.
@@ -13,8 +13,7 @@ class ImageViewController: MainViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        self.showLoader()
+        
     }
 }
 

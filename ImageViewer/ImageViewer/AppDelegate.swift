@@ -23,19 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Setting up cooridnator
         //--------------------------------------------------------------------------
 
-        let navigationController = UINavigationController()
-        navigationController.navigationBar.barStyle = .default
-        navigationController.navigationBar.barTintColor = .lightGray
-        navigationController.navigationBar.tintColor = .white
-        navigationController.navigationBar.isTranslucent = false
-
-        coordinator = MainCoordinator(navigationController: navigationController)
+        window = UIWindow(frame: UIScreen.main.bounds)
+        coordinator = MainCoordinator(window: window!)
         coordinator?.start()
 
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-        
         return true
     }
 }
