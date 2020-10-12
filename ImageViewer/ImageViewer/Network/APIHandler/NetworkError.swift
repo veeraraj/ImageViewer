@@ -19,15 +19,15 @@ extension NetworkError: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .noResponse:
-            return NSLocalizedString("No response from the server.", comment: "noResponse")
+            return StringConstants.networkErrorNoResponse.localizedString()
         case .badURL:
-            return NSLocalizedString("Please check the URL.", comment: "badURL")
+            return StringConstants.networkErrorBadURL.localizedString()
         case .badServerResponse:
-            return NSLocalizedString("Invalid response from the server.", comment: "badServerResponse")
+            return StringConstants.networkErrorBadServerResponse.localizedString()
         case .decodingFailed:
-            return NSLocalizedString("Unable to decode the received json. Please check your parser", comment: "decodingFailed")
+            return StringConstants.networkErrorDecodingFailed.localizedString()
         case .noInternetConnection:
-            return NSLocalizedString("Internet connectivity seems to be unavailabe. Please check.", comment: "noInternetConnection")
+            return StringConstants.networkErrorNoInternet.localizedString()
         }
     }
 }

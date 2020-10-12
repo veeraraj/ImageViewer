@@ -29,6 +29,9 @@
 		0D2477F0253395310074D297 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D15BC2825335D6F003152C3 /* ImageViewController.swift */; };
 		0D2477F625339D8B0074D297 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2477F525339D8B0074D297 /* ImageTableViewCell.swift */; };
 		0D2478062533A5420074D297 /* FactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2478052533A5420074D297 /* FactListViewModel.swift */; };
+		0D49D3FE25344469007A9CD9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D49D40025344469007A9CD9 /* Localizable.strings */; };
+		0D49D40D25344706007A9CD9 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49D40C25344706007A9CD9 /* StringConstants.swift */; };
+		0D49D4152534476C007A9CD9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D49D4142534476C007A9CD9 /* String+Extensions.swift */; };
 		6015893B0D236178532D8D13 /* Pods_ImageViewer_ImageViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */; };
 		E899C020E19A53BD248118DF /* Pods_ImageViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B8B184728C14FBF2DC235FE /* Pods_ImageViewer.framework */; };
 		EBED9DE842B631F3DFFDFA8E /* Pods_ImageViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */; };
@@ -81,6 +84,9 @@
 		0D2477F525339D8B0074D297 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		0D2478052533A5420074D297 /* FactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListViewModel.swift; sourceTree = "<group>"; };
 		0D24780D2533BB6E0074D297 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		0D49D3FF25344469007A9CD9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0D49D40C25344706007A9CD9 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		0D49D4142534476C007A9CD9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		120E5F1A8E789B2F032E5842 /* Pods_ImageViewer_ImageViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewer_ImageViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1964A3BA2242450435850628 /* Pods_ImageViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		684972DCC3B93037CEB7C0F2 /* Pods-ImageViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageViewer.debug.xcconfig"; path = "Target Support Files/Pods-ImageViewer/Pods-ImageViewer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				0D15BC2425335D6F003152C3 /* AppDelegate.swift */,
+				0D49D40B253446ED007A9CD9 /* StringConstants */,
 				0D2477AC25336BC70074D297 /* Models */,
 				0D2477C925338D3E0074D297 /* Views */,
 				0D2477CA25338D4B0074D297 /* ViewModels */,
@@ -219,6 +226,7 @@
 			children = (
 				0D2477A1253368CA0074D297 /* URL+Extensions.swift */,
 				0D2477D325338DE80074D297 /* UIScreen+Extensions.swift */,
+				0D49D4142534476C007A9CD9 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +253,7 @@
 				0D15BC2F25335D73003152C3 /* LaunchScreen.storyboard */,
 				0D15BC2D25335D73003152C3 /* Assets.xcassets */,
 				0D2477B4253380610074D297 /* Mock */,
+				0D49D40025344469007A9CD9 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -323,6 +332,14 @@
 				0D2477F525339D8B0074D297 /* ImageTableViewCell.swift */,
 			);
 			path = ImageTableViewCell;
+			sourceTree = "<group>";
+		};
+		0D49D40B253446ED007A9CD9 /* StringConstants */ = {
+			isa = PBXGroup;
+			children = (
+				0D49D40C25344706007A9CD9 /* StringConstants.swift */,
+			);
+			path = StringConstants;
 			sourceTree = "<group>";
 		};
 		E7E44C47E39213EF628DDC39 /* Pods */ = {
@@ -457,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D15BC3125335D73003152C3 /* LaunchScreen.storyboard in Resources */,
+				0D49D3FE25344469007A9CD9 /* Localizable.strings in Resources */,
 				0D15BC2E25335D73003152C3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +606,7 @@
 			files = (
 				0D2477AE25336BEF0074D297 /* ImageModel.swift in Sources */,
 				0D2477922533683B0074D297 /* URLRouter.swift in Sources */,
+				0D49D40D25344706007A9CD9 /* StringConstants.swift in Sources */,
 				0D24779C2533685C0074D297 /* NetworkError.swift in Sources */,
 				0D2477CE25338D970074D297 /* MainViewController.swift in Sources */,
 				0D24778C253364D20074D297 /* ReachabilityHandler.swift in Sources */,
@@ -598,6 +617,7 @@
 				0D2477F625339D8B0074D297 /* ImageTableViewCell.swift in Sources */,
 				0D2477A8253369930074D297 /* ThreadHelper.swift in Sources */,
 				0D15BC7125336031003152C3 /* MainCoordinator.swift in Sources */,
+				0D49D4152534476C007A9CD9 /* String+Extensions.swift in Sources */,
 				0D2477D425338DE80074D297 /* UIScreen+Extensions.swift in Sources */,
 				0D15BC2525335D6F003152C3 /* AppDelegate.swift in Sources */,
 				0D15BC6C25335FFE003152C3 /* Coordinator.swift in Sources */,
@@ -646,6 +666,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		0D49D40025344469007A9CD9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D49D3FF25344469007A9CD9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -653,6 +681,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -714,6 +743,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

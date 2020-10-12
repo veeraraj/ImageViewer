@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-fileprivate struct Constants {
-    static let noConnectivity = "No connectivity available"
-}
-
 class NetworkIndicatorView: UIView {
 
     //--------------------------------------------------------------------------
@@ -50,7 +46,7 @@ class NetworkIndicatorView: UIView {
         self.label.textAlignment = .center
         self.label.textColor = .white
         self.label.font = UIFont.boldSystemFont(ofSize: 14.0)
-        self.label.text = Constants.noConnectivity
+        self.label.text = StringConstants.noConnectivity.localizedString()
 
         self.stactView.addArrangedSubview(label)
         self.addSubview(self.stactView)

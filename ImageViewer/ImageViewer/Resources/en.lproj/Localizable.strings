@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  ImageViewer
+
+  Created by Veera on 12/10/20.
+  
+*/
+
+"Error_No_Connectivity_Available" = "No connectivity available";
+"Error_Generic_Error" = "Something went wrong";
+"Refresh_Control_title" = "Pull down to refresh...";
+"Alert_Title" = "Image Loader App";
+"Ok" = "Ok";
+"Network_Error_No_Response" = "No response from the server.";
+"Network_Error_Bad_Url" = "Please check the URL.";
+"Network_Error_Bad_Server_Response" = "Invalid response from the server.";
+"Network_Error_Decoding_Failed" = "Unable to decode the received json. Please check your parser";
+"Network_Error_No_Internet_Connection" = "Internet connectivity seems to be unavailabe. Please check.";

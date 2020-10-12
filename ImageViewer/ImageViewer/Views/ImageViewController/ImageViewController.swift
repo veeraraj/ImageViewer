@@ -9,7 +9,6 @@ import UIKit
 
 fileprivate struct Constants {
     static let imageCellReuseIdentifier = "ItemsCell"
-    static let refreshControlTitle = "Pull down to refresh..."
 }
 
 class ImageViewController: MainViewController {
@@ -27,7 +26,7 @@ class ImageViewController: MainViewController {
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .black
-        refreshControl.attributedTitle = NSAttributedString(string: Constants.refreshControlTitle)
+        refreshControl.attributedTitle = NSAttributedString(string: StringConstants.refreshControlTitle.localizedString())
         refreshControl.addTarget(self, action: #selector(pullToRefresh), for: UIControl.Event.valueChanged)
         return refreshControl
     }()
@@ -79,7 +78,7 @@ private extension ImageViewController {
     
     func getFactsData() {
         guard self.isConnectionAvailable() else {
-            self.showAlert(with: NetworkError.noInternetConnection.errorDescription ?? "No Connectivity Available")
+            self.showAlert(with: NetworkError.noInternetConnection.errorDescription ?? StringConstants.noConnectivity.localizedString())
             return
         }
         
@@ -87,7 +86,7 @@ private extension ImageViewController {
         imageListViewModel.getImages(completion: { [weak self] error in
             guard error == nil else {
                 self?.hideLoader()
-                self?.showAlert(with: error?.localizedDescription ?? "Something went wrong")
+                self?.showAlert(with: error?.localizedDescription ?? StringConstants.genericError.localizedString())
                 return
             }
 

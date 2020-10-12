@@ -10,8 +10,6 @@ import UIKit
 fileprivate struct Constants {
     static let networkIndicatorViewFrame: CGRect = CGRect(x: 0.0, y: UIScreen.bottomPosition,
                                                           width: UIScreen.width, height: 44.0)
-    static let alertTitle = "Image Loader App"
-    static let alertOk = "Ok"
 }
 
 class MainViewController: UIViewController, ReachabilityObesrver {
@@ -58,8 +56,8 @@ extension MainViewController {
 
     func showAlert(with message: String) {
         ThreadHelper.mainThreadAsync {
-            let alertController = UIAlertController(title: Constants.alertTitle, message: message, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: Constants.alertOk, style: .default, handler: nil))
+            let alertController = UIAlertController(title: StringConstants.alertTitle.localizedString(), message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: StringConstants.ok.localizedString(), style: .default, handler: nil))
             self.present(alertController, animated: true, completion: nil)
         }
     }
