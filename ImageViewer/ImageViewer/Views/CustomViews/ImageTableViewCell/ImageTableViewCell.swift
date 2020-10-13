@@ -8,6 +8,17 @@
 import UIKit
 import SDWebImage
 
+fileprivate struct Constants {
+    static let cellCornerRadius: CGFloat = 10.0
+    static let cellBorderWidth: CGFloat = 2.0
+    static let spacing10: CGFloat = 10.0
+    static let spacingNegative10: CGFloat = -10.0
+    static let size200: CGFloat = 200.0
+    static let placeHolderImage = "placeholder"
+    static let fontSize20: CGFloat = 20.0
+    static let fontSize14: CGFloat = 14.0
+}
+
 class ImageTableViewCell: UITableViewCell {
 
     //--------------------------------------------------------------------------
@@ -27,32 +38,40 @@ class ImageTableViewCell: UITableViewCell {
         
         self.selectionStyle = .none
         self.backgroundColor = .cyan
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = Constants.cellCornerRadius
         self.layer.masksToBounds = true
-        self.layer.borderWidth = 2.0
+        self.layer.borderWidth = Constants.cellBorderWidth
         self.layer.borderColor = UIColor.black.cgColor
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
-            titleLabel.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant: 10),
-            titleLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant: -10),
+            titleLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor,
+                                            constant: Constants.spacing10),
+            titleLabel.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor,
+                                                constant: Constants.spacing10),
+            titleLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor,
+                                                 constant: Constants.spacingNegative10),
             
             factImageView.centerXAnchor.constraint(equalTo:self.contentView.centerXAnchor),
-            factImageView.topAnchor.constraint(equalTo:self.titleLabel.bottomAnchor, constant: 10),
-            factImageView.widthAnchor.constraint(equalToConstant: 150),
-            factImageView.heightAnchor.constraint(equalToConstant:100),
+            factImageView.topAnchor.constraint(equalTo:self.titleLabel.bottomAnchor,
+                                               constant: Constants.spacing10),
+            factImageView.widthAnchor.constraint(equalToConstant: Constants.size200),
+            factImageView.heightAnchor.constraint(equalToConstant: Constants.size200),
             
-            descriptionLabel.topAnchor.constraint(equalTo:self.factImageView.bottomAnchor, constant: 10),
-            descriptionLabel.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant: 10),
-            descriptionLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant: -10),
-            descriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor,constant: -10)
+            descriptionLabel.topAnchor.constraint(equalTo:self.factImageView.bottomAnchor,
+                                                  constant: Constants.spacing10),
+            descriptionLabel.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor,
+                                                      constant: Constants.spacing10),
+            descriptionLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor,
+                                                       constant: Constants.spacingNegative10),
+            descriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor,
+                                                     constant: Constants.spacingNegative10)
         ])
     }
     
     override func prepareForReuse() {
         factImageView.image = nil
-        titleLabel.text = ""
-        descriptionLabel.text = ""
+        titleLabel.text = StringConstants.emptyString
+        descriptionLabel.text = StringConstants.emptyString
     }
     
     //--------------------------------------------------------------------------
@@ -68,7 +87,7 @@ class ImageTableViewCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.font = UIFont.boldSystemFont(ofSize: Constants.fontSize20)
         label.textColor = .darkText
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -77,7 +96,7 @@ class ImageTableViewCell: UITableViewCell {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 14)
+        label.font = UIFont.boldSystemFont(ofSize: Constants.fontSize14)
         label.textColor =  .darkGray
         label.numberOfLines = 0
         label.sizeToFit()
@@ -95,8 +114,13 @@ class ImageTableViewCell: UITableViewCell {
     }
     
     func loadImage(with row: Row) {
-        factImageView.sd_setImage(with: URL(string: row.imageHref ?? ""),
-                              placeholderImage: UIImage(named: "placeholder"),
+        guard let imageURL = row.imageHref else {
+            factImageView.image = UIImage(named: Constants.placeHolderImage)
+            return
+        }
+        
+        factImageView.sd_setImage(with: URL(string: imageURL),
+                              placeholderImage: UIImage(named:  Constants.placeHolderImage),
                               options: .refreshCached,
                               completed: nil)
     }
