@@ -12,7 +12,6 @@ fileprivate struct Constants {
     static let cellCornerRadius: CGFloat = 10.0
     static let cellBorderWidth: CGFloat = 2.0
     static let spacing10: CGFloat = 10.0
-    static let spacingNegative10: CGFloat = -10.0
     static let size200: CGFloat = 200.0
     static let placeHolderImage = "placeholder"
     static let fontSize20: CGFloat = 20.0
@@ -49,7 +48,7 @@ class ImageTableViewCell: UITableViewCell {
             titleLabel.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor,
                                                 constant: Constants.spacing10),
             titleLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor,
-                                                 constant: Constants.spacingNegative10),
+                                                 constant: -Constants.spacing10),
             
             factImageView.centerXAnchor.constraint(equalTo:self.contentView.centerXAnchor),
             factImageView.topAnchor.constraint(equalTo:self.titleLabel.bottomAnchor,
@@ -62,9 +61,9 @@ class ImageTableViewCell: UITableViewCell {
             descriptionLabel.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor,
                                                       constant: Constants.spacing10),
             descriptionLabel.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor,
-                                                       constant: Constants.spacingNegative10),
+                                                       constant: -Constants.spacing10),
             descriptionLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor,
-                                                     constant: Constants.spacingNegative10)
+                                                     constant: -Constants.spacing10)
         ])
     }
     
